@@ -22,7 +22,6 @@
   :is(a, button, input, textarea, select, details, summary):focus-visible {
     outline: theme('colors.electric-blue') solid 0.188rem;
     outline-offset: 0.188rem;
-    /* theme('colors.custom-blue') */
   }
 
   .text-linear-background {
@@ -51,8 +50,10 @@
     content: "";
     position: absolute;
     z-index: -10;
-    width: 1013px;
+    width: 70vw;
+    max-width: 1013px;
     height: 1013px;
+    aspect-ratio: 1/1;
     left: -336px;
     top: -305px;
 
@@ -66,7 +67,7 @@
     position: absolute;
     width: 701px;
     height: 496px;
-    left: 1127px;
+    right: 0;
     top: 500px;
 
     background: #072D56;
@@ -77,8 +78,10 @@
     content: "";
     z-index: -10;
     position: absolute;
-    width: 777px;
+    width: 70vw;
+    max-width: 777px;
     height: 777px;
+    aspect-ratio: 1/1;
     left: -444px;
     top: 0;
 
@@ -122,6 +125,5 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background-color: #39CDED;
-    /* theme('colors.custom-blue') */
   }
 }

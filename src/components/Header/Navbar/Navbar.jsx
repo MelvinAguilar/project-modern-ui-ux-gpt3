@@ -4,8 +4,8 @@ const Navbar = ({ toggleMenu, isMenuOpen }) => {
   return (
     <nav aria-label="Main" className="w-auto lg:w-full">
       <ul
-        className={`absolute top-[4.375rem] right-[2.2rem] flex w-full max-w-[15.625rem] translate-x-[150%] flex-col gap-4 rounded-md bg-maastricht-blue p-4 text-right transition duration-300 ease-in-out lg:static lg:flex lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0 ${
-          isMenuOpen ? "!translate-x-0" : ""
+        className={`absolute top-[4.375rem] right-[2.2rem] flex w-full max-w-[15.625rem] -translate-y-[150%] flex-col gap-4 rounded-md bg-maastricht-blue p-4 text-right transition duration-300 ease-in-out lg:static lg:flex lg:max-w-none lg:transform-none lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:p-0 ${
+          isMenuOpen ? "!translate-y-0" : ""
         }`}
       >
         <li>
