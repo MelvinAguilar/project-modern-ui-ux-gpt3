@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Manrope", sans-serif;
+  }
+
+  body {
+    background-color: theme('colors.dark-blue');
+  }
+
+  details[open] img {
+    transform: rotate(180deg);
+  }
+}
+
+@layer components {
+  :is(a, button, input, textarea, select, details, summary):focus-visible {
+    outline: theme('colors.electric-blue') solid 0.188rem;
+    outline-offset: 0.188rem;
+    /* theme('colors.custom-blue') */
+  }
+
+  .text-linear-background {
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .bg-linear-background {
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  }
+
+  .line-heading::before {
+    content: "";
+    display: block;
+    width: 2.375rem;
+    height: 0.1875rem;
+    position: relative;
+    top: -0.75rem;
+    background: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%), #FFFFFF;
+  }
+
+  .blur-01::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    width: 1013px;
+    height: 1013px;
+    left: -336px;
+    top: -305px;
+
+    background: #002853;
+    filter: blur(282px);
+  }
+
+  .blur-01::after {
+    content: "";
+    z-index: -10;
+    position: absolute;
+    width: 701px;
+    height: 496px;
+    left: 1127px;
+    top: 500px;
+
+    background: #072D56;
+    filter: blur(282px);
+  }
+
+  .blur-02::before {
+    content: "";
+    z-index: -10;
+    position: absolute;
+    width: 777px;
+    height: 777px;
+    left: -444px;
+    top: 0;
+
+    background: #07325F;
+    filter: blur(282px);
+  }
+
+  .width-fill-available {
+    width: -webkit-fill-available;
+  }
+
+  .filter-dark {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .filter-logo-white {
+    filter: invert(1) brightness(6) hue-rotate(180deg);
+  }
+
+  .transition-filter {
+    transition: filter 220ms linear;
+    -webkit-transition: -webkit-filter 220ms linear;
+  }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: theme('colors.maastricht-blue');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #25AFDB;
+    border-radius: 1.25rem;
+    border: 0.1875rem solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #39CDED;
+    /* theme('colors.custom-blue') */
+  }
+}
